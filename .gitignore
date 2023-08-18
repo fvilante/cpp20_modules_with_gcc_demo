@@ -1,0 +1,4 @@
+main.o
+func.o
+App*
+*.gcm
