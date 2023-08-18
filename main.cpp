@@ -1,12 +1,12 @@
 // main.cpp
 //void func();  // declaration
 
-#include <iostream>
+//#include <iostream>
 
 import MyModule;
 
 
 int main(){
 
-    std::cout << "hello world! -----> " << func(1,2);
+    func(1,2);
 }
