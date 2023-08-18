@@ -18,7 +18,7 @@ main.o: main.cpp
 	g++ -c -std=c++20 -fmodules-ts main.cpp
 
 clean:
-	-rm App.exe
-	-rm func.o
-	-rm main.o
-	-rm -r gcm.cache
+	@-rm App.exe
+	@-rm func.o
+	@-rm main.o
+	@-rm -r gcm.cache
