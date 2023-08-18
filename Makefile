@@ -1,6 +1,8 @@
 
 .PHONY: all clean run
 
+COMPILER = g++
+
 default: all
 
 run: all
@@ -9,13 +11,13 @@ run: all
 all: App.exe
 
 App.exe: func.o main.o
-	g++ main.o func.o -o App
+	${COMPILER} main.o func.o -o App
 
 func.o: func.cpp 
-	g++ -c -std=c++20 -fmodules-ts func.cpp
+	${COMPILER} -c -std=c++20 -fmodules-ts func.cpp
 
 main.o: main.cpp 
-	g++ -c -std=c++20 -fmodules-ts main.cpp
+	${COMPILER} -c -std=c++20 -fmodules-ts main.cpp
 
 clean:
 	@-rm App.exe
