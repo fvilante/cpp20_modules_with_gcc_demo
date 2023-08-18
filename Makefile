@@ -10,6 +10,7 @@ run: all
 
 all: App.exe
 
+# order of dependency matters
 App.exe: func.o main.o
 	${COMPILER} main.o func.o -o App
 
@@ -20,7 +21,7 @@ main.o: main.cpp
 	${COMPILER} -c -std=c++20 -fmodules-ts main.cpp
 
 clean:
-	@-rm App.exe
+	@-rm App
 	@-rm func.o
 	@-rm main.o
 	@-rm -r gcm.cache
